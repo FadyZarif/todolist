@@ -1,21 +1,28 @@
+
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
-class ArchivedTasksScreen extends StatefulWidget {
-  const ArchivedTasksScreen({Key? key}) : super(key: key);
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todolist/shared/components/components.dart';
+import 'package:todolist/shared/components/constants.dart';
+import 'package:todolist/shared/cubit/cubit.dart';
+import 'package:todolist/shared/cubit/states.dart';
 
-  @override
-  State<ArchivedTasksScreen> createState() => _ArchivedTasksScreenState();
-}
-
-class _ArchivedTasksScreenState extends State<ArchivedTasksScreen> {
+class ArchivedTasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        "Archived Tasks",
-        style: TextStyle(
-            fontSize: 25
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Archived Tasks'),
         ),
-      ),
+        body: BlocConsumer<AppCubit,AppStates>(
+          listener: (BuildContext context, state) {  },
+          builder: (BuildContext context, Object? state) {
+            var cubit = AppCubit.get(context);
+            return tasksBuilder(tasksList: cubit.archivedTasksList);
+          },
+        )
     );
   }
 }
+
+

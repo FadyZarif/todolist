@@ -1,21 +1,28 @@
+
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
-class DoneTasksScreen extends StatefulWidget {
-  const DoneTasksScreen({Key? key}) : super(key: key);
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todolist/shared/components/components.dart';
+import 'package:todolist/shared/components/constants.dart';
+import 'package:todolist/shared/cubit/cubit.dart';
+import 'package:todolist/shared/cubit/states.dart';
 
-  @override
-  State<DoneTasksScreen> createState() => _DoneTasksScreenState();
-}
-
-class _DoneTasksScreenState extends State<DoneTasksScreen> {
+class DoneTasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        "Done Tasks",
-        style: TextStyle(
-            fontSize: 25
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Done Tasks'),
         ),
-      ),
+        body: BlocConsumer<AppCubit,AppStates>(
+          listener: (BuildContext context, state) {  },
+          builder: (BuildContext context, Object? state) {
+            var cubit = AppCubit.get(context);
+            return tasksBuilder(tasksList: cubit.doneTasksList);
+          },
+        )
     );
   }
 }
+
+
