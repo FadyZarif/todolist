@@ -13,7 +13,7 @@ Here is a demo of the project:
 
 ## Delete Task
 
-Here is a demo of the project:
+Here is a delete task in project:
 
 <p align="center">
   <img width="200" height="350" src="project_images/delete.gif">
