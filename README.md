@@ -8,7 +8,7 @@ To download this app, follow this link: [ToDoListApp](https://www.dropbox.com/sc
 Here is a demo of the project: 
 
 <p align="center">
-  <img width="250" height="650" src="project_images/demo.gif">
+  <img width="250" height="550" src="project_images/demo.gif">
 </p>
 
 ## Delete Task
@@ -16,7 +16,7 @@ Here is a demo of the project:
 Here is a delete task in project:
 
 <p align="center">
-  <img width="250" height="650" src="project_images/delete.gif">
+  <img width="250" height="550" src="project_images/delete.gif">
 </p>
 
 ## For users:
