@@ -35,6 +35,7 @@ Here is a delete task in project:
 2. Programming Language: Dart(version 3.2.0)
 3. Editor: Android Studio
 4. Database: SQLite (have to be included as a dependency too)
+5. State Management: Bloc(cubit)
 
 ### Widgets used: 
 1. SafeArea (to make the app UI for different sizes of screen)
